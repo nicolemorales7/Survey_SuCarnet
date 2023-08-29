@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Survey_SuCarnet.SurveyDetailsView"
+             Title="Nueva Encuesta">
+    <VerticalStackLayout>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+            <RowDefinition />
+                <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+            <StackLayout>
+                <Label Text="Nombre" />
+                <Entry x:Name="NameEntry" />
+                <Label Text="Fecha de naciento" />
+                <DatePicker x:Name="FavoriteTeamLabel" />
+                <Label Text="Equipo favorito" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="FavoiriteTeamLabel" />
+                    <Button Grid.Column="1" Text="...." Clicked="FavoriteTeamButton_Clicked" />
+                </Grid>
+            </StackLayout>
+            <Button Text="Aceptar" Grid.Row="1" Clicked="OkButton_Clicked" />
+            </Grid>
+    </VerticalStackLayout>
+</ContentPage>
